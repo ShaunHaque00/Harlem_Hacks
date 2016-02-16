@@ -20,6 +20,13 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
+		    <style>
+      #map {
+        width: 1000px;
+        height: 500px;
+      }
+    </style>
+
 	</head>
 	<body>
 
@@ -40,11 +47,26 @@
 				<div class="container">
 
 					<header class="major special">
+					<br>
 						<h2>Where is harlemHacks?</h2>
 						<p>TBD</p>
 					</header>
 
-					<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+					    <div id="map"></div>
+   					 <script>
+      					function initMap() {
+        				var mapDiv = document.getElementById('map');
+       				 	var map = new google.maps.Map(mapDiv, {
+          				center: {lat: 44.540, lng: -78.546},
+          				zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer>
+        </script>
+
+
 					<p></p>
 
 				</div>
